@@ -66,9 +66,8 @@ const PortfolioSec = () => {
                 >
                   {group.items.map((card) => (
                     // Card
-                    <SwiperSlide className="">
+                    <SwiperSlide key={card.id} className="">
                       <PortfolioCard
-                        key={card.id}
                         img={card.imgUrl}
                         title={card.title}
                         date={card.date}

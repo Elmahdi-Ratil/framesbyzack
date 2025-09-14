@@ -24,9 +24,9 @@ const BioSec = () => {
           spanned over 15 years. Driven by an insatiable curiosity to explore
           the beauty in everyday moments, Zakaria Taberkant has honed her craft
           meticulously. Her background in digital media provided her with a
-          solid foundation, but it's her keen eye for detail and an innate
+          solid foundation, but its her keen eye for detail and an innate
           ability to capture raw emotions that truly set her apart. Zakaria Taberkant
-          journey is more than just taking pictures; it's about capturing the
+          journey is more than just taking pictures; its about capturing the
           essence of the human spirit, the fleeting magic of nature, and the
           emotions that define our lives. With each click of her camera, she
           weaves stories that transcend time and space.

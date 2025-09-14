@@ -55,7 +55,7 @@ const AboutSec = () => {
               <p>
                 My journey as a photographer has been a lifelong quest to
                 capture the extraordinary in the ordinary, to freeze fleeting
-                moments in time, and to share the world's beauty as I see it.
+                moments in time, and to share the worlds beauty as I see it.
                 Based in the enchanting landscapes of the MAR, I find
                 inspiration in every corner of this diverse and vibrant country.
                 Join me as we embark on a visual odyssey, where each photograph

@@ -12,7 +12,7 @@ const Form = () => {
           <Title title="Send Me a Message" />
           <p className="mt-6">
             Have a specific inquiry or message for us? Please use the contact
-            form below, and we'll get back to you promptly.
+            form below, and we ll get back to you promptly.
           </p>
         </div>
         {/* Form */}

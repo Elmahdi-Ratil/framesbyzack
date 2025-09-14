@@ -47,8 +47,8 @@ const ServicesSec = () => {
               <h2>Events</h2>
               <p className="my-5 max-w-[570px]">
                 Our event photography service is dedicated to capturing the
-                magic of your special occasions. Whether it's a wedding,
-                corporate event, or milestone celebration, we're there to
+                magic of your special occasions. Whether its a wedding,
+                corporate event, or milestone celebration, were there to
                 document every heartfelt moment. We blend into the background,
                 ensuring natural and candid shots that reflect the emotions of
                 the day.

@@ -35,9 +35,9 @@ const TopSec = () => {
             <motion.p variants={fadeInUp} className="mt-6 lg:mb-[50px]">
               Step into a world of timeless photography with Zakaria Taberkant.
               Explore our range of photography services, each crafted to tell
-              your unique story through captivating images. Whether it's the
+              your unique story through captivating images. Whether its the
               magic of portraits, the emotion of events, or the allure of
-              commercial photography, we're here to bring your vision to life.
+              commercial photography, were here to bring your vision to life.
             </motion.p>
           </div>
           {/* Shape */}
