@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@govuk-react/input-field": "^0.10.7",
     "@remixicon/react": "^4.6.0",
     "framer-motion": "^12.23.12",
     "motion": "^12.23.12",
