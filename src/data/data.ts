@@ -31,6 +31,8 @@ export const navItems = [
 export const marqueeItems = [
   {
     label: "Event Photography",
+
+    imgUrl: "/images/portfolio-img-2.png",
   },
   {
     label: "Comercial Photography",
@@ -562,4 +564,38 @@ export const serviceNotes = [
   { note: "Each hotel receives 50% commission per booking." },
   { note: "Delivery in 4K video and 6K photos." },
   { note: "Delivery time: 5–7 business days." },
+];
+
+// logos of partner companies
+export const partnerLogos = [
+  {
+    id: 1,
+    name: "Attitude",
+    img: "/images/partner/attitude.png",
+  },
+  {
+    id: 2,
+    name: "Company 2",
+    img: "/images/partner/Lagon-Energy.png",
+  },
+  {
+    id: 3,
+    name: "Company 3",
+    img: "/images/partner/pk25.png",
+  },
+  {
+    id: 4,
+    name: "Company 4",
+    img: "/images/partner/West-Point.png",
+  },
+  {
+    id: 5,
+    name: "Company 5",
+    img: "/images/partner/Blue-sky-bar.png",
+  },
+  {
+    id: 6,
+    name: "Company 6",
+    img: "/images/partner/D.D.D.png",
+  },
 ];

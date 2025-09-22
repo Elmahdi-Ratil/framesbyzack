@@ -14,26 +14,17 @@ const nextConfig: NextConfig = {
     unoptimized: true, // الصور غادي تبان مباشرة بدون تحسين Next.js
   },
 
-  experimental: {
-    turbo: {
-      rules: {}, // إعدادات turbo (اختياري)
-    },
+  turbopack: {
+    enabled: true, // عوض experimental.turbo
   },
 };
 */
 
 const nextConfig: NextConfig = {
   /* config options here */
-  
-};
-
-module.exports = {
-  experimental: {
-    turbo: {
-      rules: {}, // optional if you want turbo customization
-    },
+  turbopack: {
+    rules: {},
   },
 };
-
 
 export default nextConfig;
