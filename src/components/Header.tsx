@@ -1,53 +1,77 @@
-"use client"
+"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { RiCloseLine, RiMenu3Line } from "@remixicon/react";
 import { navItems } from "@/data/data";
-
+import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Handle button click event
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const pathname = usePathname();
+
+  const handleClick = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowHeader(window.scrollY <= lastScrollY);
+      setLastScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="border-b border-neutral-900">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      } ${
+        lastScrollY > 50
+          ? "bg-[#F4E1C1]/70 backdrop-blur-md border-b border-[#C68642]"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container flex justify-between items-center py-5 lg:pb-0">
         {/* Logo */}
-        <Link className="text-3xl font-medium uppercase" href={"/"}>
-          Zakaria Taberkant
+        <Link href={"/"} className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Zakaria Taberkant Logo"
+            width={120}
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Mobile menu */}
-        <nav className={`navbar ${isOpen ? "active" : ""} `}>
-          {/* nav top */}
+        <nav className={`navbar ${isOpen ? "active" : ""}`}>
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-medium uppercase">Zakaria Taberkant</h3>
+            <h3 className="text-3xl font-medium uppercase text-[#C68642]">
+              Zakaria Taberkant
+            </h3>
             <button
-              className="w-[50px] h-[50px] border flex items-center justify-center rounded-full border-neutral-800 hover:bg-neutral-900 transition-colors"
+              className="w-[50px] h-[50px] border flex items-center justify-center rounded-full border-[#C68642] hover:bg-[#D4A373] transition-colors"
               onClick={handleClick}
             >
               <RiCloseLine size={30} />
             </button>
           </div>
 
-          {/* nav list */}
           <ul className="grid">
             {navItems.map((item) => (
               <li
-                className="border-t border-neutral-900 text-center "
+                className="border-t border-[#C68642] text-center"
                 key={item.id}
               >
                 <Link
                   href={item.path}
-                  className={`block py-5 hover:bg-neutral-900 ${
-                    pathname === item.path ? "bg-neutral-900" : ""
+                  className={`block py-5 hover:bg-[#D4A373] transition-colors ${
+                    pathname === item.path ? "bg-[#C68642]" : ""
                   }`}
                   onClick={handleClick}
                 >
@@ -57,24 +81,23 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Contact btn */}
           <Link
             href="/contact"
-            className="primary-btn block text-center mt-10"
+            className="primary-btn block text-center mt-10 bg-[#D4A373] hover:bg-[#C68642] border-[#C68642]"
             onClick={handleClick}
           >
             contact me
           </Link>
         </nav>
 
-        {/* Lg menu */}
-        <ul className="flex items-center max-lg:hidden border border-neutral-800 rounded-t-2xl overflow-hidden">
+        {/* Large menu */}
+        <ul className="flex items-center max-lg:hidden border border-[#C68642] rounded-t-2xl overflow-hidden">
           {navItems.map((item) => (
             <li key={item.id}>
               <Link
                 href={item.path}
-                className={`px-8 py-5 block hover:bg-neutral-900 transition-colors ${
-                  pathname === item.path ? "bg-neutral-900" : ""
+                className={`px-8 py-5 block hover:bg-[#D4A373] transition-colors ${
+                  pathname === item.path ? "bg-[#C68642]" : ""
                 }`}
               >
                 {item.label}
@@ -83,21 +106,22 @@ const Header = () => {
           ))}
         </ul>
 
-        {/* lg contact btn */}
-        <Link href="/contact" className="primary-btn hidden lg:block">
+        <Link
+          href="/contact"
+          className="primary-btn hidden lg:block bg-[#D4A373] hover:bg-[#C68642] border-[#C68642]"
+        >
           contact me
         </Link>
 
-        {/* menu toggle */}
         <button className="lg:hidden" onClick={handleClick}>
           <RiMenu3Line size={30} />
         </button>
 
-        {/* overlay */}
         <div
           className={`overlay ${isOpen ? "active" : ""}`}
+          style={{ backgroundColor: "rgba(212, 163, 115, 0.5)" }}
           onClick={handleClick}
-        ></div>
+        />
       </div>
     </header>
   );

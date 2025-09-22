@@ -7,12 +7,14 @@ import { RiArrowRightUpLine } from "@remixicon/react";
 import { motion } from "motion/react";
 import { staggerContainer, fadeInUp } from "@/motion/animations";
 
+
 interface secProps {
   subtitle: string;
-  price: number | string;
+  prices: { price1: number | string; price2: number | string };
 }
 
-const PricingSec = ({ subtitle, price }: secProps) => {
+const PricingSec = ({ subtitle, prices }: secProps) => {
+  const { price1, price2 } = prices; // نفك التجزئة
   return (
     <section>
       <motion.div
@@ -29,9 +31,14 @@ const PricingSec = ({ subtitle, price }: secProps) => {
           </motion.p>
           <motion.div
             variants={fadeInUp}
-            className="flex flex-wrap items-center max-lg:justify-between gap-2 mt-1"
+            className="flex flex-col items-center gap-2 mt-1"
           >
-            <h3 className="text-5xl">$ {price}</h3>
+            {/* السطر الأول */}
+            <h3 className="text-5xl">$ {price1}</h3>
+
+            {/* السطر الثاني */}
+            <h3 className="text-5xl">$ {price2}</h3>
+
             {/* Link */}
             <div className="flex items-center border-b border-neutral-800 hover:border-neutral-400 transition">
               <Link href="#" className="mb-2">

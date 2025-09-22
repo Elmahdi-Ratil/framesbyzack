@@ -4,9 +4,8 @@ import React from "react";
 import Title from "@/components/Title";
 import Divider from "@/components/Divider";
 import Image from "next/image";
-import { servicesHeightligts } from "@/data/data";
-import ServicesCard from "@/components/ServicesCard";
-//import motion
+
+// motion
 import { motion } from "motion/react";
 import { staggerContainer, fadeInUp } from "@/motion/animations";
 
@@ -20,53 +19,50 @@ const ServicesSec = () => {
         viewport={{ once: true }}
         className="container"
       >
-        {/* title */}
-        <Title
-          subtitle="Services"
-          title="My Photography Services"
-          link="View All Services"
-        />
-
-        {/* Divider */}
+        {/* Title */}
+        <Title subtitle="Services" title="What I Offer" link="See More" />
         <Divider />
-        {/* Wrapper */}
-        <div className="grid gap-[50px] lg:grid-cols-2">
-          {/* Banner */}
-          <motion.figure variants={fadeInUp} className="lg:order-1">
-            <Image
-              src="/images/services-section-banner.png"
-              alt="banner"
-              width={773}
-              height={625}
-              className="rounded-t-xl rounded-b-4xl"
-            />
-          </motion.figure>
-          {/* content */}
-          <motion.div variants={fadeInUp} className="grid gap-14">
-            <div>
-              <h2>Events</h2>
-              <p className="my-5 max-w-[570px]">
-                Our event photography service is dedicated to capturing the
-                magic of your special occasions. Whether its a wedding,
-                corporate event, or milestone celebration, were there to
-                document every heartfelt moment. We blend into the background,
-                ensuring natural and candid shots that reflect the emotions of
-                the day.
-              </p>
-            </div>
-            <div>
-              <p className="text-white font-medium mb-5 text-xl">
-                Service Highlights
-              </p>
-              {/* card wrapper */}
-              <div className="grid gap-2">
-                {servicesHeightligts.map((item) => (
-                  // Card
-                  <ServicesCard key={item.id} label={item.label} />
-                ))}
-              </div>
-            </div>
-          </motion.div>
+
+        {/* Services List */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+          {[
+            {
+              id: 1,
+              icon: "/images/service-1.svg",
+              title: "Surf Photography",
+              desc: "Capturing surfers in their best wave moments.",
+            },
+            {
+              id: 2,
+              icon: "/images/service-2.svg",
+              title: "Kite Photography",
+              desc: "Dynamic shots of kite rides across the ocean.",
+            },
+            {
+              id: 3,
+              icon: "/images/service-3.svg",
+              title: "Desert Portraits",
+              desc: "Natural photography inspired by the Sahara dunes.",
+            },
+          ].map((item) => (
+            <motion.div
+              variants={fadeInUp}
+              key={item.id}
+              className="border border-accent3 p-6 rounded-2xl bg-backgroundClr hover:bg-accent2 transition-colors"
+            >
+              <Image
+                src={item.icon}
+                alt={item.title}
+                width={60}
+                height={60}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-semibold text-accent3 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-accent2">{item.desc}</p>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </section>

@@ -3,64 +3,45 @@
 import Image from "next/image";
 import React from "react";
 import Button from "@/components/Button";
-import MarqueeSec from "@/components/MarqueeSec";
-
-//import motion
 import { motion } from "motion/react";
 import { fadeInUp, staggerContainer } from "@/motion/animations";
 
 const HeroSec = () => {
   return (
-    <section>
+    <section className="relative w-full h-screen">
+      {/* Background */}
+      <Image
+        src="/images/hero-banner.png"
+        alt="hero background"
+        fill
+        className="object-cover object-center"
+        priority
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Content */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
+        className="relative z-10 flex flex-col items-center justify-center h-full text-center text-foregroundClr px-4"
       >
-        {/* Content */}
-        <div className="container max-lg:my-10 grid lg:grid-cols-3 lg:items-center lg:justify-between">
-          {/* Title */}
-          <div className="">
-            <motion.p variants={fadeInUp} className="subtitle">
-              Stunning Photography by
-            </motion.p>
-            <motion.h1
-              variants={fadeInUp}
-              className="text-[40px] sm:text-5xl md;text-6xl font-semibold"
-            >
-              Zakaria Taberkant
-            </motion.h1>
-          </div>
-
-          {/* Shape */}
-          <div className="max-lg:hidden">
-            <Image
-              src="/images/shape-1.svg"
-              alt="shape"
-              width={346}
-              height={346}
-            />
-          </div>
-
-          {/* Title 2 */}
-          <motion.div variants={fadeInUp}>
-            <Button label="Let's" />
-            <h2>Work Together</h2>
-          </motion.div>
-        </div>
-        {/* Marquee */}
-        {/* Banner */}
-        <motion.figure variants={fadeInUp} className="container">
-          <Image
-            src="/images/hero-banner.png"
-            alt="hero banner"
-            width={1280}
-            height={424}
-            className="w-full h-full object-cover"
-            priority
-          />
-        </motion.figure>
+        <motion.p variants={fadeInUp} className="subtitle mb-4">
+          Stunning Photography by
+        </motion.p>
+        <motion.h1
+          variants={fadeInUp}
+          className="text-[40px] sm:text-5xl md:text-6xl font-bold text-accent3"
+        >
+          Zakaria Taberkant
+        </motion.h1>
+        <motion.div variants={fadeInUp} className="mt-6 flex items-center gap-2">
+          <Button label="Let's" />
+          <h2 className="text-2xl font-medium text-accent3">Work Together</h2>
+        </motion.div>
       </motion.div>
     </section>
   );

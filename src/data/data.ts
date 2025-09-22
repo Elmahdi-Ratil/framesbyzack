@@ -2,6 +2,7 @@ import {
   RiFacebookFill,
   RiTwitterFill,
   RiLinkedinFill,
+  RiInstagramFill,
 } from "@remixicon/react";
 
 export const navItems = [
@@ -51,12 +52,19 @@ export const marqueeItems = [
 export const socialLinks = [
   {
     icon: RiFacebookFill,
+    url: "https://www.facebook.com/yourprofile",
   },
   {
     icon: RiTwitterFill,
+    url: "https://twitter.com/yourprofile",
   },
   {
     icon: RiLinkedinFill,
+    url: "https://www.linkedin.com/in/yourprofile",
+  },
+  {
+    icon: RiInstagramFill,
+    url: "https://www.instagram.com/framesbyzack",
   },
 ];
 
@@ -448,123 +456,110 @@ export const portfolioCardItems = [
 // services page
 // *********************
 
+
+
+
+
+
+// Main packages (photo/video for clients)
 export const servicePriceItems = [
   {
     id: 1,
-    subtitle: "Individual Session",
-    price: 250,
+    subtitle: "Family Package",
+    prices: { price1: 170, price2: 220 },
     texts: [
-      { text: "Ideal for capturing your unique personality and style." },
-      {
-        text: "Includes a 2-hour photoshoot and 20 professionally edited images.",
-      },
-      { text: "Additional images can be purchased at $10 each." },
+      { text: "Photography: 1-hour session, 40+ retouched photos." },
+      { text: "Video: 1 cinematic 4K reel (30–60 sec)." },
     ],
   },
   {
     id: 2,
-    subtitle: "Family Session",
-    price: 400,
+    subtitle: "Sunset Package",
+    prices: { price1: 190, price2: 210 },
     texts: [
-      { text: "Perfect for creating lasting memories with your loved ones." },
-      {
-        text: "Includes a 3-hour photoshoot and 30 professionally edited images.",
-      },
-      { text: "Additional images can be purchased at $10 each." },
+      { text: "Photography: Sunset session, 25+ retouched photos." },
+      { text: "Video: 1 cinematic 4K reel (30–45 sec)." },
     ],
   },
   {
     id: 3,
-    subtitle: "Couple Session",
-    price: 300,
+    subtitle: "Social Media Content",
+    prices: { price1: 190, price2: 230 },
     texts: [
-      { text: "Celebrate your love story with an intimate photoshoot." },
+      { text: "Photography: 1h30 session, 30+ retouched photos." },
       {
-        text: "Includes a 2.5-hour photoshoot and 25 professionally edited images.",
+        text: "Video: 2 cinematic 4K reels (15–30 sec each, optimized for IG/TikTok).",
       },
-      { text: "Additional images can be purchased at $10 each." },
     ],
   },
 ];
 
+// Lifestyle + Couple packages
 export const servicePriceItemsSecond = [
   {
-    id: 1,
-    subtitle: "Wedding Photography",
-    price: 1500,
+    id: 4,
+    subtitle: "Lifestyle Package",
+    prices: { price1: 190, price2: 300 },
     texts: [
-      { text: "Capture the magic of your special day." },
       {
-        text: "Includes full-day coverage, a second photographer, and 300+ professionally edited images.",
+        text: "Photography: 2-hour immersive session (rooms, restaurant, spa, drone if planned), 40 retouched photos.",
       },
-      {
-        text: "Customizable packages are available to suit your specific wedding needs.",
-      },
+      { text: "Video: 2 cinematic reels (25–45 sec each)." },
     ],
   },
   {
-    id: 2,
-    subtitle: "Party Coverage",
-    price: 800,
+    id: 5,
+    subtitle: "Couple Package",
+    prices: { price1: 200, price2: 250 },
     texts: [
-      { text: "Preserve the fun and excitement of your event." },
       {
-        text: "Includes up to 4 hours of coverage and 150+ professionally edited images.",
+        text: "Photography: Romantic / honeymoon 1h30 session, 40 retouched photos.",
       },
-      { text: "Additional hours can be added at $150 per hour." },
+      { text: "Video: 1 cinematic reel (30–50 sec)." },
+    ],
+  },
+];
+
+// Excursion + Water Sports packages
+export const servicePriceItemsThird = [
+  {
+    id: 6,
+    subtitle: "Excursion Package",
+    prices: { price1: 290, price2: 400 },
+    texts: [
+      {
+        text: "Photography: Half-day or full-day session (kite, surf, desert, boat, camels, quad…), 50 retouched photos.",
+      },
+      { text: "Video: 2 cinematic reels (25–40 sec each)." },
     ],
   },
   {
-    id: 3,
-    subtitle: "Corporate Events",
-    price: "Custom Pricing",
+    id: 7,
+    subtitle: "Water Sports Package",
+    prices: { price1: 200, price2: 280 },
     texts: [
       {
-        text: "Tailored solutions for corporate gatherings, conferences, and seminars.",
+        text: "Photography: 1h30 action session on the water, 35+ retouched photos.",
       },
       {
-        text: "Contact us for a personalized quote based on your event's requirements.",
+        text: "Video: 1 dynamic reel (45 sec). Option to add drone (aerial view).",
       },
     ],
   },
 ];
 
-export const servicePriceItemsThird = [
-  {
-    id: 1,
-    subtitle: "Product Photography",
-    price: 500,
-    texts: [
-      { text: "Showcase your products in the best light." },
-      {
-        text: "Includes a half-day photoshoot, 20 professionally edited product images, and high-resolution files.",
-      },
-      { text: "Additional images can be purchased at $20 each." },
-    ],
-  },
-  {
-    id: 2,
-    subtitle: "Real Estate Photography",
-    price: 700,
-    texts: [
-      { text: "Highlight the beauty of your properties." },
-      {
-        text: "Includes interior and exterior shots, a 2-hour photoshoot, and 25 professionally edited images.",
-      },
-      { text: "Additional images can be purchased at $20 each." },
-    ],
-  },
-  {
-    id: 3,
-    subtitle: "Brand Photography",
-    price: "Custom Pricing",
-    texts: [
-      {
-        text: "Craft a visual narrative that aligns with your brand identity.",
-      },
-      {
-        text: "Contact us to discuss your brand photography needs and receive a personalized quote.",
-      },
-    ],
-  },
+// Extra Options
+export const serviceExtraOptions = [
+  { option: "Drone Photos", price: 120 },
+  { option: "Drone Video", price: 170 },
+  { option: "Highlight Film (1–2 min)", price: 150 },
+  { option: "Raw Content Delivery", price: "On request" },
+];
+
+// Notes
+export const serviceNotes = [
+  { note: "Prices are indicated per service (photo or video)." },
+  { note: "Each hotel receives 50% commission per booking." },
+  { note: "Delivery in 4K video and 6K photos." },
+  { note: "Delivery time: 5–7 business days." },
 ];

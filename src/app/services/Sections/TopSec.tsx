@@ -27,7 +27,7 @@ const TopSec = () => {
           />
         </motion.figure>
         {/* Title */}
-        <div className="lg:absolute lg:top-0 lg:left-52 lg:p-5 lg:bg-[#0a0a0a] lg:rounded-bl-3xl">
+        <div className="lg:absolute lg:top-0 lg:left-52 lg:p-5 lg:bg-backgroundClr lg:rounded-bl-3xl">
           <Title subtitle="Services" title="Diverse Photography Offerings" />
           <motion.p variants={fadeInUp} className="mt-6 lg:mb-[50px]">
             Unlock the full spectrum of professional photography services
@@ -37,7 +37,7 @@ const TopSec = () => {
           </motion.p>
         </div>
         {/* Shape */}
-        <div className="max-lg:hidden absolute bottom-0 left-0 bg-[#0a0a0a] p-5 rounded-tr-3xl">
+        <div className="max-lg:hidden absolute bottom-0 left-0 bg-backgroundClr p-5 rounded-tr-3xl">
           <Image
             src="/images/page-banner-shape.svg"
             alt="shape"
@@ -46,7 +46,7 @@ const TopSec = () => {
           />
         </div>
         {/* bg text */}
-        <p className="max-lg:hidden absolute bottom-0 right-0 pr-5 pl-10 rounded-tl-3xl py-8 bg-[#0a0a0a]">
+        <p className="max-lg:hidden absolute bottom-0 right-0 pr-5 pl-10 rounded-tl-3xl py-8 bg-backgroundClr">
           Scroll Down to see <br /> all services
         </p>
       </motion.div>
