@@ -3,6 +3,9 @@ import TopSec from "./Sections/TopSec";
 import ServicesIntroSec from "./Sections/ServicesIntroSec";
 import Divider from "@/components/Divider";
 import PricingSec from "./Sections/PricingSec";
+import Brands from "../portfolio/section/Brands";
+
+
 import {
   servicePriceItems,
   servicePriceItemsSecond,
@@ -16,13 +19,12 @@ const Services = () => {
   return (
     <>
       <TopSec />
+      <Divider />
       <ServicesIntroSec
         title="Portrait Photography"
         image="/images/services-banner-1.png"
         description="Our portrait photography service is all about showcasing your unique personality. Whether you need a professional headshot, a family portrait, or a personal photoshoot, we create images that reflect your true self. We work closely with you to bring out your best angles and expressions, ensuring every portrait tells your story."
       />
-
-      <Divider />
       {/* pricing section */}
       <section className="section">
         <div className="container grid gap-12">
@@ -52,7 +54,6 @@ const Services = () => {
         image="/images/services-banner-2.png"
       />
 
-      <Divider />
       {/* pricing section */}
       <section className="section">
         <div className="container grid gap-12">
@@ -120,7 +121,7 @@ const Services = () => {
         </div>
       </section>
 
-      <Divider />
+      
       {/* Notes */}
       <section className="py-8">
         <div className="container text-center">
@@ -132,6 +133,8 @@ const Services = () => {
           </div>
         </div>
       </section>
+      
+      <Brands />
     </>
   );
 };

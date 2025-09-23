@@ -25,16 +25,18 @@ const Brands = () => {
         variants={fadeIn}
         className="mt-6 bg-neutral-900 border-y border-neutral-800"
       >
-        <div className="container">
-          <Marquee>
+        <div className="container h-24 flex items-center">
+          {" "}
+          {/* h-24 = 6rem */}
+          <Marquee gradient={false} pauseOnHover={true}>
             {logoImages.map((img) => (
-              <div key={img.id}>
+              <div key={img.id} className="mx-8 flex items-center">
                 <Image
                   src={img.img}
-                  height={201}
-                  width={40}
                   alt="logo"
-                  className="w-full h-full object-cover"
+                  height={80} // height fixe
+                  width={160} // proportionate width
+                  className="object-contain"
                 />
               </div>
             ))}

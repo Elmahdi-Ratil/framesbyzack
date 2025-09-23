@@ -31,7 +31,7 @@ const Header = () => {
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${
         lastScrollY > 50
-          ? "bg-[#F4E1C1]/70 backdrop-blur-md border-b border-[#C68642]"
+          ? "bg-foregroundClr/70 backdrop-blur-md border-b border-accent2"
           : "bg-transparent"
       }`}
     >
@@ -51,11 +51,11 @@ const Header = () => {
         {/* Mobile menu */}
         <nav className={`navbar ${isOpen ? "active" : ""}`}>
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-medium uppercase text-[#C68642]">
+            <h3 className="text-3xl font-medium uppercase text-accent2">
               Zakaria Taberkant
             </h3>
             <button
-              className="w-[50px] h-[50px] border flex items-center justify-center rounded-full border-[#C68642] hover:bg-[#D4A373] transition-colors"
+              className="w-[50px] h-[50px] border flex items-center justify-center rounded-full bg-accent2 border-accent2 hover:bg-accent1 transition-colors"
               onClick={handleClick}
             >
               <RiCloseLine size={30} />
@@ -65,13 +65,13 @@ const Header = () => {
           <ul className="grid">
             {navItems.map((item) => (
               <li
-                className="border-t border-[#C68642] text-center"
+                className="border-t border-accent2 text-center"
                 key={item.id}
               >
                 <Link
                   href={item.path}
-                  className={`block py-5 hover:bg-[#D4A373] transition-colors ${
-                    pathname === item.path ? "bg-[#C68642]" : ""
+                  className={`block py-5 hover:bg-accent2 transition-colors ${
+                    pathname === item.path ? "bg-accent1" : ""
                   }`}
                   onClick={handleClick}
                 >
@@ -83,7 +83,7 @@ const Header = () => {
 
           <Link
             href="/contact"
-            className="primary-btn block text-center mt-10 bg-[#D4A373] hover:bg-[#C68642] border-[#C68642]"
+            className="primary-btn block text-center mt-10 bg-accent2 hover:bg-accent1 border-accent1"
             onClick={handleClick}
           >
             contact me
@@ -91,13 +91,13 @@ const Header = () => {
         </nav>
 
         {/* Large menu */}
-        <ul className="flex items-center max-lg:hidden border border-[#C68642] rounded-t-2xl overflow-hidden">
+        <ul className="flex items-center max-lg:hidden border border-accent1 rounded-t-2xl overflow-hidden">
           {navItems.map((item) => (
             <li key={item.id}>
               <Link
                 href={item.path}
-                className={`px-8 py-5 block hover:bg-[#D4A373] transition-colors ${
-                  pathname === item.path ? "bg-[#C68642]" : ""
+                className={`px-8 py-5 block hover:bg-accent2 transition-colors ${
+                  pathname === item.path ? "bg-accent1" : ""
                 }`}
               >
                 {item.label}
@@ -108,7 +108,7 @@ const Header = () => {
 
         <Link
           href="/contact"
-          className="primary-btn hidden lg:block bg-[#D4A373] hover:bg-[#C68642] border-[#C68642]"
+          className="primary-btn hidden lg:block bg-accent1 hover:bg-accent2 border-accent1"
         >
           contact me
         </Link>

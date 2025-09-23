@@ -18,10 +18,10 @@ const ServicesCard = ({ label }: cardProps) => {
     >
       <motion.div
         variants={fadeInUp}
-        className="flex items-center gap-2 mb-3 border border-[#C68642] py-6 px-5 rounded-lg bg-[#F4E1C1]/10"
+        className="flex items-center gap-2 mb-3 border border-accent1 py-6 px-5 rounded-lg bg-accent1/10"
       >
         <Image src="/images/star-shape.svg" alt="icon" width={30} height={30} />
-        <span className="text-[#D4A373]">{label}</span>
+        <span className="text-neutral-800">{label}</span>
       </motion.div>
     </motion.div>
   );

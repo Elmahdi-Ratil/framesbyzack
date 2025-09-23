@@ -32,7 +32,7 @@ const TopSec = () => {
           {/* Title */}
           <div className="lg:absolute lg:top-[20%] lg:bg-backgroundClr lg:px-5 lg:py-10  lg:max-w-[50%] lg:rounded-br-3xl rounded-tr-3xl">
             <Title subtitle="Contact Me" title="Get in Touch with Me" />
-            <motion.p variants={fadeInUp} className="mt-6 lg:mb-[50px]">
+            <motion.p variants={fadeInUp} className="mt-6 text-neutral-800 lg:mb-[50px]">
               Step into a world of timeless photography with Zakaria Taberkant.
               Explore our range of photography services, each crafted to tell
               your unique story through captivating images. Whether its the
@@ -41,11 +41,11 @@ const TopSec = () => {
             </motion.p>
           </div>
           {/* Shape */}
-          <div className="max-lg:hidden absolute top-[10%] right-0 bg-[#0a0a0a] p-5 rounded-tl-full rounded-bl-full">
+          <div className="max-lg:hidden absolute top-[10%] right-0 bg-backgroundClr p-5 rounded-tl-full rounded-bl-full">
             <SocialIcons />
           </div>
           {/* bg text */}
-          <p className="max-lg:hidden absolute bottom-0 right-0 pr-5 pl-10 rounded-tl-3xl py-8 bg-[#0a0a0a]">
+          <p className="max-lg:hidden absolute bottom-0 right-0 pr-5 pl-10 rounded-tl-3xl py-8 bg-backgroundClr">
             Scroll Down to see <br /> all services
           </p>
         </motion.div>

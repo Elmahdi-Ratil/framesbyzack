@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 
+
 @theme {
   /* 🌞 Light Theme - Desert Day */
   --color-backgroundClr: #E5C07B; /* الرمل الفاتح */
@@ -34,11 +35,11 @@ body {
   }
 
   .subtitle {
-    @apply text-accent3 uppercase mb-1 text-sm lg:text-base;
+    @apply text-neutral-800 uppercase mb-1 text-sm lg:text-base;
   }
 
   p {
-    @apply text-accent3 text-base sm:text-lg lg:text-xl;
+    @apply text-neutral-800 text-base sm:text-lg lg:text-xl;
   }
 
   h2 {
@@ -46,7 +47,7 @@ body {
   }
 
   .section {
-    @apply pt-24 md:mt-40;
+    @apply pt-10 md:mt-20;
   }
 }
 

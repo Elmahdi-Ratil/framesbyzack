@@ -17,7 +17,7 @@ interface sectionProps {
 
 const ServicesIntroSec = ({ title, description, image }: sectionProps) => {
   return (
-    <section className="mt-40 mb-16">
+    <section className="mt-10 mb-16">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

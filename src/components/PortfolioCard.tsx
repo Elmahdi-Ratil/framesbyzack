@@ -14,7 +14,10 @@ interface cardProps {
 
 const PortfolioCard = ({ img, title, date }: cardProps) => {
   return (
-    <motion.div variants={fadeInUp} className="bg-[#F4E1C1]/10 p-4 rounded-xl border border-[#C68642]">
+    <motion.div
+      variants={fadeInUp}
+      className="bg-accent1/10 p-4 rounded-xl border border-accent1"
+    >
       <figure className="mb-5">
         <Image
           src={img}
@@ -24,14 +27,14 @@ const PortfolioCard = ({ img, title, date }: cardProps) => {
           className="rounded-4xl w-full h-full object-cover"
         />
       </figure>
-      <div className="flex justify-between items-center flex-wrap gap-5">
+      <div className="flex flex-col justify-between h-full">
         <div>
-          <h4 className="text-xl text-[#C68642]">{title}</h4>
-          <p className="text-[#D4A373]">{date}</p>
+          <h4 className="text-xl text-neutral-800 break-words">{title}</h4>
+          <p className="text-neutral-800">{date}</p>
         </div>
         <Link
           href="/portfolio"
-          className="flex items-center gap-2 uppercase hover:text-[#C68642] transition-colors"
+          className="mt-4 flex items-center gap-2 uppercase hover:text-accent2 transition-colors"
         >
           View Project
           <span>

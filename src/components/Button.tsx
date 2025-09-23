@@ -8,10 +8,10 @@ interface ButtonProps {
 const Button = ({ label }: ButtonProps) => {
   return (
     <button className="flex items-center gap-2.5 max-w-max">
-      <h2 className="flex items-center flex-wrap gap-2 text-accent3">
+      <h2 className="flex items-center flex-wrap gap-2 text-foregroundClr">
         {label}
       </h2>
-      <span className="bg-accent2 w-20 h-12 flex items-center justify-center rounded-full hover:bg-accent3 transition-colors">
+      <span className="bg-neutral-800 w-20 h-12 flex items-center justify-center rounded-full hover:bg-neutral-700 transition-colors">
         <RiArrowRightUpLongLine size={26} />
       </span>
     </button>

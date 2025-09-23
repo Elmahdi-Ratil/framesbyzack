@@ -34,19 +34,19 @@ const TopSec = () => {
               // Card
               <motion.div
                 variants={fadeInUp}
-                className="bg-neutral-900 px-[14px] text-center py-5 rounded-xl"
+                className="border border-accent1 bg-accent3 px-[14px] text-center py-5 rounded-xl"
                 key={item.id}
               >
                 {inView && (
                   <>
-                    <h3 className="text-3xl lg:text-4xl font-semibold">
+                    <h3 className="text-foregroundClr text-3xl lg:text-4xl font-semibold">
                       <CountUp end={item.value} duration={2} />
                       {item.id === 6 ? "%" : "+"}
                     </h3>
                   </>
                 )}
 
-                <p>{item.text}</p>
+                <p className="text-neutral-800">{item.text}</p>
               </motion.div>
             ))}
           </div>

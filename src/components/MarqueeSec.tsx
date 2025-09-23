@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 const MarqueeSec = () => {
   return (
-    <div className="border border-[#C68642] flex gap-10 justify-center py-3">
+    <div className="border border-accent1 flex gap-10 justify-center py-3">
       <Marquee pauseOnHover={true} gradient={false}>
         {partnerLogos.map((item) => (
           <div className="flex items-center p-5 gap-2" key={item.id}>

@@ -14,7 +14,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 //import motion
 import { motion } from "motion/react";
-import { fadeInUp, staggerContainer } from "@/motion/animations";
+import { staggerContainer } from "@/motion/animations";
 
 const PortfolioSec = () => {
   return (
@@ -36,7 +36,7 @@ const PortfolioSec = () => {
                 {/* Divider */}
                 <Divider />
                 {/* title */}
-                <div className="flex items-center justify-between flex-wrap gap-4 mt-[70px] mb-10">
+                <div className="flex items-center justify-between flex-wrap gap-4 mt-[70px] mb-5">
                   <Title title={group.title} />
                   {/* Navigation btns */}
                   <NavigationBtns

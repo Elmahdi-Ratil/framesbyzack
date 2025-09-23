@@ -2,7 +2,7 @@
 
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animations";
+import { fadeInUp, staggerContainer } from "@/motion/animations";
 
 import Title from "@/components/Title";
 import { journeyItems } from "@/data/data";
@@ -27,7 +27,7 @@ const JourneySec = () => {
             // Card
             <motion.div
               variants={fadeInUp}
-              className="bg-neutral-900 p-10 text-neutral-400"
+              className="rounded-[10px] border border-accent1 bg-accent1/10 p-10 text-neutral-800"
               key={item.id}
             >
               <h4 className="text-2xl md:text-3xl uppercase font-semibold mb-3">
