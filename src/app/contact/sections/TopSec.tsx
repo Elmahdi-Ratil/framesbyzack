@@ -11,7 +11,7 @@ import SocialIcons from "@/components/SocialIcons";
 const TopSec = () => {
   return (
     <>
-      <section className="pt-20">
+      <section className="pt-30">
         <motion.div
           variants={staggerContainer}
           initial="hidden"

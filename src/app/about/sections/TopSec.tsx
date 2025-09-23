@@ -16,7 +16,7 @@ const TopSec = () => {
     threshold: 0.3,
   });
   return (
-    <section className="pt-20">
+    <section className="pt-30">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
