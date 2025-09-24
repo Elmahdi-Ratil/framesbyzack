@@ -302,27 +302,65 @@ export const journeyItems = [
 // *********************
 // portfolio page
 // *********************
+// logos of partner companies <-- Brands -->
 export const logoImages = [
   {
     id: 1,
-    img: "/images/Logo.png",
+    img: "/images/partner/redbull.svg",
   },
   {
     id: 2,
-    img: "/images/Logo-1.png",
+    img: "/images/partner/Logo-1.png",
   },
   {
     id: 3,
-    img: "/images/Logo-2.png",
+    img: "/images/partner/Logo-2.png",
   },
   {
     id: 4,
-    img: "/images/Logo-3.png",
+    img: "/images/partner/Logo-3.png",
   },
   {
     id: 5,
-    img: "/images/Logo-4.png",
+    img: "/images/partner/Logo-4.png",
   },
+  {
+    id: 6,
+    img: "/images/partner/sidi-ali.png",
+  },
+  {
+    id: 7,
+    img: "/images/partner/attitude.png",
+  },
+  {
+    id: 8,
+    img: "/images/partner/Lagon-Energy.png",
+  },
+  {
+    id: 9,
+    img: "/images/partner/pk25.png",
+  },
+  {
+    id: 10,
+    img: "/images/partner/West-Point.png",
+  },
+  {
+    id: 11,
+    img: "/images/partner/Blue-sky-bar.png",
+  },
+  {
+    id: 12,
+    img: "/images/partner/D.D.D.png",
+  },
+];
+// logos of partner companies
+export const partnerLogos = [
+  {
+    id: 2,
+    name: "Company 2",
+    img: "/images/partner/",
+  },
+  
 ];
 
 export const portfolioCardItems = [
@@ -566,36 +604,3 @@ export const serviceNotes = [
   { note: "Delivery time: 5–7 business days." },
 ];
 
-// logos of partner companies
-export const partnerLogos = [
-  {
-    id: 1,
-    name: "Attitude",
-    img: "/images/partner/attitude.png",
-  },
-  {
-    id: 2,
-    name: "Company 2",
-    img: "/images/partner/Lagon-Energy.png",
-  },
-  {
-    id: 3,
-    name: "Company 3",
-    img: "/images/partner/pk25.png",
-  },
-  {
-    id: 4,
-    name: "Company 4",
-    img: "/images/partner/West-Point.png",
-  },
-  {
-    id: 5,
-    name: "Company 5",
-    img: "/images/partner/Blue-sky-bar.png",
-  },
-  {
-    id: 6,
-    name: "Company 6",
-    img: "/images/partner/D.D.D.png",
-  },
-];

@@ -35,7 +35,7 @@ const Brands = () => {
                   src={img.img}
                   alt="logo"
                   height={80} // height fixe
-                  width={160} // proportionate width
+                  width={115} // proportionate width
                   className="object-contain"
                 />
               </div>

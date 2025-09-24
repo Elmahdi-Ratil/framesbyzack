@@ -27,9 +27,9 @@ const PortfolioSec = () => {
         {/* Projects */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10">
           {[
-            { id: 1, src: "/images/work-1.png", title: "Surf Session" },
-            { id: 2, src: "/images/work-2.png", title: "Kite Ride" },
-            { id: 3, src: "/images/work-3.png", title: "Desert Vibes" },
+            { id: 1, src: "/images/1.jpg", title: "Surf Session" },
+            { id: 2, src: "/images/1.jpg", title: "Kite Ride" },
+            { id: 3, src: "/images/1.jpg", title: "Desert Vibes" },
           ].map((item) => (
             <motion.div
               variants={fadeInUp}

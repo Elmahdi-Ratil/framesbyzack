@@ -28,19 +28,19 @@ const ServicesSec = () => {
           {[
             {
               id: 1,
-              icon: "/images/service-1.svg",
+              src: "/images/4.webp",
               title: "Surf Photography",
               desc: "Capturing surfers in their best wave moments.",
             },
             {
               id: 2,
-              icon: "/images/service-2.svg",
+              src: "/images/4.webp",
               title: "Kite Photography",
               desc: "Dynamic shots of kite rides across the ocean.",
             },
             {
               id: 3,
-              icon: "/images/service-3.svg",
+              src: "/images/4.webp",
               title: "Desert Portraits",
               desc: "Natural photography inspired by the Sahara dunes.",
             },
@@ -51,9 +51,9 @@ const ServicesSec = () => {
               className="border border-accent3 p-6 rounded-2xl bg-backgroundClr hover:bg-accent2 transition-colors"
             >
               <Image
-                src={item.icon}
+                src={item.src}
                 alt={item.title}
-                width={60}
+                width={500}
                 height={60}
                 className="mb-4"
               />

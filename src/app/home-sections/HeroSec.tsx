@@ -11,7 +11,7 @@ const HeroSec = () => {
     <section className="relative w-full h-screen">
       {/* Background */}
       <Image
-        src="/images/hero-banner.png"
+        src="/images/2.jpg"
         alt="hero background"
         fill
         className="object-cover object-center"
