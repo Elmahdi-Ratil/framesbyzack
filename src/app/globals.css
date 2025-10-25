@@ -4,25 +4,17 @@
 
 @theme {
   /* 🌞 Light Theme - Desert Day */
-  --color-backgroundClr: #E5C07B; /* الرمل الفاتح */
-  --color-foregroundClr: #F5F5DC; /* النصوص */
+  --color-backgroundClr: #F7FBFC; /* الرمل الفاتح */
+  --color-foregroundClr: #d4a373; /* النصوص */
   --color-accent1: #FF8C42; /* للشعارات أو أزرار رئيسية */
-  --color-accent2: #C49E6C; /* عناصر تكميلية */
-  --color-accent3: #A67B5B; /* عناصر ثانية */
+  --color-accent2: #E4CDA7; /* عناصر تكميلية */
+  --color-accent3: #f5a25d; /* عناصر ثانية */
 }
 
-/* 🌙 Dark Theme - Desert Night */
-[data-theme="dark"] {
-  --color-backgroundClr: #1E1B16; /* خلفية شبه سوداء */
-  --color-foregroundClr: #E5D9C5; /* نص فاتح */
-  --color-accent1: #FF7847; /* برتقالي أفتح */
-  --color-accent2: #7C6A4C; /* رملي غامق */
-  --color-accent3: #B9975B; /* ذهبي رملي */
-}
 
 /* Base styles */
 body {
-  @apply bg-backgroundClr text-foregroundClr overflow-x-hidden;
+  @apply bg-backgroundClr text-accent1 overflow-x-hidden;
 }
 
 @layer utilities {
@@ -53,7 +45,7 @@ body {
 
 @layer components {
   .primary-btn {
-    @apply bg-accent1 px-6 py-4 rounded-[10px] hover:bg-accent2 transition-colors border border-accent3;
+    @apply bg-accent2 px-6 py-4 rounded-[10px] hover:bg-accent2/60 transition-colors border border-accent1;
   }
 }
 

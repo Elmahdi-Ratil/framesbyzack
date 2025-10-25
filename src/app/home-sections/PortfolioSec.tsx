@@ -5,6 +5,7 @@ import Title from "@/components/Title";
 import Divider from "@/components/Divider";
 import Image from "next/image";
 import Link from "next/link";
+import { RiArrowRightLongLine } from "@remixicon/react";
 
 // motion
 import { motion } from "motion/react";
@@ -21,7 +22,18 @@ const PortfolioSec = () => {
         className="container"
       >
         {/* Title */}
-        <Title subtitle="Portfolio" title="Selected Works" link="See All" />
+        <Title
+          subtitle="Portfolio"
+          title="Selected Works"
+          link={
+            <Link
+              href="portfolio"
+              className="primary-btn flex items-center gap-2"
+            >
+              See All <RiArrowRightLongLine size={20} />
+            </Link>
+          }
+        />
         <Divider />
 
         {/* Projects */}
@@ -45,8 +57,8 @@ const PortfolioSec = () => {
               />
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Link
-                  href="#"
-                  className="text-foregroundClr bg-accent2 px-6 py-2 rounded-full hover:bg-accent3 transition-colors"
+                  href={`/portfolio/${item.id}`}
+                  className="text-foregroundClr bg-accent1 px-6 py-2 rounded-full hover:bg-accent3 transition-colors"
                 >
                   {item.title}
                 </Link>

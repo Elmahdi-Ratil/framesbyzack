@@ -27,7 +27,7 @@ const JourneySec = () => {
             // Card
             <motion.div
               variants={fadeInUp}
-              className="rounded-[10px] border border-accent1 bg-accent1/10 p-10 text-neutral-800"
+              className="rounded-[10px] border border-accent1 bg-accent2 p-10 text-accent1"
               key={item.id}
             >
               <h4 className="text-2xl md:text-3xl uppercase font-semibold mb-3">

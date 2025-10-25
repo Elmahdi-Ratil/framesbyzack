@@ -57,10 +57,10 @@ const ServicesSec = () => {
                 height={60}
                 className="mb-4"
               />
-              <h3 className="text-xl font-semibold text-accent3 mb-2">
+              <h3 className="text-xl font-semibold text-foregroundClr mb-2">
                 {item.title}
               </h3>
-              <p className="text-accent2">{item.desc}</p>
+              <p className="text-neutral-800">{item.desc}</p>
             </motion.div>
           ))}
         </div>

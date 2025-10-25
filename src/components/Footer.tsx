@@ -21,7 +21,7 @@ const Footer = () => {
         {/* Footer Top */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] mb-20">
           <div className="flex flex-col gap-6">
-            <h2 className="text-4xl font-bold text-foregroundClr">
+            <h2 className="text-4xl font-bold text-accent1">
               {"Let's Work Together"}
             </h2>
             <p className="text-neutral-800">A more meaningful home for photography</p>
@@ -30,7 +30,7 @@ const Footer = () => {
 
           {footerList.map((item) => (
             <div key={item.id} className="flex flex-col gap-3">
-              <h4 className="text-foregroundClr font-semibold">{item.title}</h4>
+              <h4 className="text-accent1 font-semibold">{item.title}</h4>
               <ul className="flex flex-col gap-2">
                 {item.links.map((link, index) => (
                   <li key={index}>

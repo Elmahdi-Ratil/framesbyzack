@@ -1,19 +1,18 @@
 "use client";
-import { RiArrowRightLongLine } from "@remixicon/react";
-import Link from "next/link";
-import React from "react";
+
+import React, { ReactNode } from "react";
 
 //import motion
 import { motion } from "motion/react";
 import { fadeInUp } from "@/motion/animations";
 
-interface titleProps {
+interface TitleProps {
   subtitle?: string;
   title: string;
-  link?: string;
+  link?: ReactNode; // بدلناها من string ل ReactNode
 }
 
-const Title = ({ subtitle, title, link }: titleProps) => {
+const Title = ({ subtitle, title, link }: TitleProps) => {
   return (
     <div className="flex items-center justify-between flex-wrap gap-7">
       <div>
@@ -25,12 +24,7 @@ const Title = ({ subtitle, title, link }: titleProps) => {
 
       {link && (
         <motion.button variants={fadeInUp}>
-          <Link href="#" className="primary-btn flex items-center gap-2">
-            {link}
-            <span>
-              <RiArrowRightLongLine size={20} />
-            </span>
-          </Link>
+          {link} {/* هنا غادي يبان Link لي سيفطتيه */}
         </motion.button>
       )}
     </div>

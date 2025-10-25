@@ -27,17 +27,17 @@ const HeroSec = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="relative z-10 flex flex-col items-center justify-center h-full text-center text-foregroundClr px-4"
+        className="relative z-10 flex flex-col items-center justify-center h-full text-center text-accent1 px-4"
       >
         <motion.p
         variants={fadeInUp}
-        className="mb-4 text-foregroundClr">
+        className="mb-4 text-backgroundClr">
           Stunning Photography by
         </motion.p>
 
         <motion.h1
           variants={fadeInUp}
-          className="text-[40px] sm:text-5xl md:text-6xl font-bold text-foregroundClr"
+          className="text-[40px] sm:text-5xl md:text-6xl font-bold text-accent1"
         >
           Zakaria Taberkant
         </motion.h1>
@@ -46,7 +46,7 @@ const HeroSec = () => {
         variants={fadeInUp}
         className="mt-6 flex items-center gap-2">
           <Button label="Let's" />
-          <h2 className="text-2xl font-medium text-foregroundClr">Work Together</h2>
+          <h2 className="text-2xl font-medium text-backgroundClr">Work Together</h2>
         </motion.div>
 
       </motion.div>
