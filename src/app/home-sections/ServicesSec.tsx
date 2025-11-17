@@ -48,7 +48,7 @@ const ServicesSec = () => {
             <motion.div
               variants={fadeInUp}
               key={item.id}
-              className="border border-accent3 p-6 rounded-2xl bg-backgroundClr hover:bg-accent2 transition-colors"
+              className="border border-accent2 p-6 rounded-2xl bg-backgroundClr hover:bg-accent2/60 transition-colors"
             >
               <Image
                 src={item.src}

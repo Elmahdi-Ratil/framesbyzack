@@ -44,7 +44,7 @@ const FaqSec = () => {
             <div className="flex items-center justify-between px-5 py-8 gap-8">
               <h3 className="text-xl uppercase">{item.title}</h3>
               <button
-                className="w-[52px] h-[52px] border border-neutral-800 rounded-full flex justify-center items-center aspect-square hover:bg-neutral-700 transition-colors"
+                className="w-[52px] h-[52px] border border-accent3 bg-accent2 rounded-full flex justify-center items-center aspect-square hover:bg-accent2/60 transition-colors"
                 onClick={() => handleClick(item.id)}
               >
                 {openId === item.id ? (

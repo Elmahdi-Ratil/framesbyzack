@@ -58,7 +58,7 @@ const PortfolioSec = () => {
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Link
                   href={`/portfolio/${item.id}`}
-                  className="text-foregroundClr bg-accent1 px-6 py-2 rounded-full hover:bg-accent3 transition-colors"
+                  className="text-accent1 bg-accent2 px-6 py-2 rounded-full hover:bg-accent2/60 transition-colors"
                 >
                   {item.title}
                 </Link>
