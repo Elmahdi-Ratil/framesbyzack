@@ -328,30 +328,6 @@ export const logoImages = [
     id: 6,
     img: "/images/partner/sidi-ali.png",
   },
-  {
-    id: 7,
-    img: "/images/partner/attitude.png",
-  },
-  {
-    id: 8,
-    img: "/images/partner/Lagon-Energy.png",
-  },
-  {
-    id: 9,
-    img: "/images/partner/pk25.png",
-  },
-  {
-    id: 10,
-    img: "/images/partner/West-Point.png",
-  },
-  {
-    id: 11,
-    img: "/images/partner/Blue-sky-bar.png",
-  },
-  {
-    id: 12,
-    img: "/images/partner/D.D.D.png",
-  },
 ];
 // logos of partner companies
 export const partnerLogos = [
